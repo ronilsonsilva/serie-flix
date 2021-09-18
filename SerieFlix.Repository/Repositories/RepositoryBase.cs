@@ -28,7 +28,7 @@ namespace SerieFlix.Repositories.Repository
 
         public virtual async Task<TEntity> Atualizar(TEntity entity)
         {
-            this._context.Entry(entity).State = EntityState.Modified;
+            this._context.Entry(entity).State = EntityState.Detached;
             await this._context.SaveChangesAsync();
             return entity;
         }

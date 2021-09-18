@@ -15,7 +15,7 @@ namespace SerieFlix.Tests.MockData.Repository
             var dbContextMock = new SerieFlixContext(options);
 
             PopuleSeries(dbContextMock);
-
+            
             return dbContextMock;
         }
 

@@ -1,18 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Moq;
+﻿using SerieFlix.Domain.Contracts.RepositoryServices;
 using SerieFlix.Domain.Entities;
 using SerieFlix.Repositories.Repository;
 using SerieFlix.Repository.Context;
 using SerieFlix.Tests.MockData;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
-using Microsoft.EntityFrameworkCore.InMemory;
 using SerieFlix.Tests.MockData.Repository;
-using SerieFlix.Domain.Contracts.RepositoryServices;
+using System.Linq;
+using Xunit;
 
 namespace SerieFlix.Tests.Units.Repositories
 {

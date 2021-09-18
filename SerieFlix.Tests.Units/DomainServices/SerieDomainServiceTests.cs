@@ -1,5 +1,4 @@
-﻿using Moq;
-using SerieFlix.Domain.Contracts.DomainServices;
+﻿using SerieFlix.Domain.Contracts.DomainServices;
 using SerieFlix.Domain.Contracts.RepositoryServices;
 using SerieFlix.Domain.DomainServices;
 using SerieFlix.Domain.Entities;

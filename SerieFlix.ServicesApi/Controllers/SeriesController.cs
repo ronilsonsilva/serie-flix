@@ -43,9 +43,9 @@ namespace SerieFlix.ServicesApi.Controllers
         public async Task<IActionResult> Post([FromBody] Serie serie)
         {
             var retornoDominio = await this._serieDomainServices.Adicionar(serie);
-            if (retornoDominio != null)
-                return Created(uri: $"series/{serie.Id}", serie);
-            return BadRequest();
+            if (retornoDominio.Ok)
+                return Created(uri: $"series/{serie.Id}", retornoDominio);
+            return BadRequest(retornoDominio);
         }
 
         // PUT api/<SerieController>/5
@@ -53,9 +53,9 @@ namespace SerieFlix.ServicesApi.Controllers
         public async Task<IActionResult> Put([FromBody] Serie serie)
         {
             var retornoDominio = await this._serieDomainServices.Atualizar(serie);
-            if (retornoDominio != null)
-                return Ok(serie);
-            return BadRequest();
+            if (retornoDominio.Ok)
+                return Ok(retornoDominio);
+            return BadRequest(retornoDominio);
         }
 
         // DELETE api/<SerieController>/5
