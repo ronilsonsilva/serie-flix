@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\SerieFlix.WebApplication.Client.csproj" />
     <ProjectReference Include="..\Shared\SerieFlix.WebApplication.Shared.csproj" />
   </ItemGroup>
 
