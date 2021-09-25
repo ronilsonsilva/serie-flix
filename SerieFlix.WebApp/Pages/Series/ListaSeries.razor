@@ -1,5 +1,38 @@
-﻿<h3>ListaSeries</h3>
+﻿@page "/series"
+
+@using Syncfusion.Blazor.Grids
+@using SerieFlix.WebApp.Core.Models
+@using SerieFlix.WebApp.Core.Contracts
+
+
+<h3>ListaSeries</h3>
+
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper">
+        <div class="row">
+            <SfGrid  DataSource="@SeriesData" AllowPaging="true">
+                <GridColumns>
+                    <GridColumn Field=@nameof(SerieViewModel.Id) HeaderText="ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+                    <GridColumn Field=@nameof(SerieViewModel.Titulo) HeaderText="Título" Width="150"></GridColumn>
+                    <GridColumn Field=@nameof(SerieViewModel.Genero) HeaderText="Gênero"  Width="130"></GridColumn>
+                    <GridColumn Field=@nameof(SerieViewModel.Ano) HeaderText="Ano"  Width="120"></GridColumn>
+                    <GridColumn Field=@nameof(SerieViewModel.Descricao) HeaderText="Descrição" Width="150"></GridColumn>
+                </GridColumns>
+            </SfGrid>
+        </div>
+    </div>
+</div>
 
 @code {
+    public IList<SerieViewModel> SeriesData { get; set; }
+    [Inject]
+    public ISerieServices SerieServices { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.SeriesData = this.SerieServices.Listar().Result;
+
+        base.OnInitialized();
+    }
 
 }

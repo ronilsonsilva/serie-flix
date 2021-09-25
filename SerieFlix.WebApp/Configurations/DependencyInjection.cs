@@ -1,8 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using SerieFlix.WebApp.Core.Contracts;
+using SerieFlix.WebApp.Core.Services;
 
 namespace SerieFlix.WebApp.Configurations
 {
@@ -10,7 +8,7 @@ namespace SerieFlix.WebApp.Configurations
     {
         public static void Resolve(IServiceCollection services)
         {
-
+            services.AddScoped<ISerieServices, SerieServices>();
         }
     }
 }

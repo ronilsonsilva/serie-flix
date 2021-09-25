@@ -15,9 +15,10 @@ namespace SerieFlix.Infra.Ioc
         {
             #region [Configurations]
 
+            var connection = configuration["CONNECTION_STRING:SeriesFlixContext"];
             services.AddDbContext<SerieFlixContext>
                 (options =>
-                    options.UseInMemoryDatabase(databaseName: "seriflix")
+                    options.UseNpgsql(connectionString: connection)
                 );
             services.AddScoped<SerieFlixContext, SerieFlixContext>();
 
