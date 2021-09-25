@@ -3,6 +3,6 @@
   <PropertyGroup>
     <Controller_SelectedScaffolderID>ApiControllerWithActionsScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/Api</Controller_SelectedScaffolderCategoryPath>
-    <NameOfLastUsedPublishProfile>C:\Users\Toctec\Source\Repos\ronilsonsilva\serie-flix\.github\workflows\main_apiserieflix.yml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\Toctec\Source\Repos\ronilsonsilva\serie-flix\.github\workflows\apiserieflix.yml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
